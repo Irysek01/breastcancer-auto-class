@@ -20,7 +20,7 @@ In [complete_set](./complete_set/) you will find training and test data.
 
 In [models](./models/) you will find the model binary: it is an unsupported file format for visualization, so don't be worried if GitHub tells you it can't show it!
 
-:warning: To be able to do **literally anything**, you need Linux! Don't have Linux? Take it easy and see how to enable Linux on your Windows PC [here](https://learn.microsoft.com/it-it/windows/wsl/install):coffee:
+:warning: To be able to do **literally anything**, you need Linux! Don't have Linux? Take it easy and see how to enable Linux on your Windows PC [here](https://learn.microsoft.com/it-it/windows/wsl/install) :coffee:
 
 ## Play around 
 Wanna give the foundation model a try?
@@ -51,7 +51,7 @@ And then run the prediction script like this:
 python3 scripts/process.py -i P003.png
 ```
 
-The predicted class should be "Malignant"... Did it work?:heart_eyes::grin:
+The predicted class should be "Malignant"... Did it work? :heart_eyes: :grin:
 
 ## Don't forget
 There are three rules while team-programming:
@@ -62,7 +62,7 @@ There are three rules while team-programming:
 
 Also, make sure to support this repository be living a little :star:!
 
-Thanks:heart:
+Thanks :heart:
 
 ## Usefuls practices
 There are two rules of common practice:
@@ -73,5 +73,5 @@ There are two rules of common practice:
 ## PS
 
 - **Want to know how to write documents like this README?** Check out the [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
-- **Feel free to take a look to [Astra's account](https://github.com/AstraBert) and repos and take inspiration!!!** (and maybe leave some stars to her repositories, please:kissing_smiling_eyes:)
+- **Feel free to take a look to [Astra's account](https://github.com/AstraBert) and repos and take inspiration!!!** (and maybe leave some stars to her repositories, please :kissing_smiling_eyes:)
 - **Wanna see what was the inspiration for the foundation model?** Check out [Nicholas Renotte's video on YouTube](https://youtu.be/jztwpsIzEGc?feature=shared) or his repository [here on GitHub](https://github.com/nicknochnack/ImageClassification)
