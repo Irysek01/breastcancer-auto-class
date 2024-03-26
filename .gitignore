@@ -5,3 +5,4 @@ scripts/bot.py
 logs/
 data/
 complete_set/training_set/
+valdata.png
