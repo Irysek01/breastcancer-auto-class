@@ -6,3 +6,4 @@ logs/
 data/
 complete_set/training_set/
 valdata.png
+complete_set/test_set/

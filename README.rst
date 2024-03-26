@@ -65,7 +65,7 @@ Now type this instruction in the terminal, pressing :command:`Enter` afterwards.
     python3 scripts/process.py -i P003.png
 
 
-You should get out that the predicted class is :dfn:`Malignant` (find out more `at this link <https://www.nationalbreastcancer.org/breast-tumors/>`_)
+You should get out that the predicted class is :dfn:`Benign` (find out more `at this link <https://www.nationalbreastcancer.org/breast-tumors/>`_)
 
 From this development environment, you could potentially do everything, but you should be careful with modifying files, adding things or deleting other stuff, because you need to know how to :guilabel:`Push` and :guilabel:`Pull` to a GitHub repository from a Codespace, which is not so easy, especially if you are a beginner!
 
