@@ -19,14 +19,7 @@ from matplotlib import pyplot
 from numpy import where
 from collections import Counter
 
-from google.colab import drive
-
-drive.mount('/content/drive')
-
-# Define Drive folder from which data can be downloaded
-
-data_folder = "/content/drive/MyDrive/path/to/your/training_set/"
-data_folder = "/content/drive/MyDrive/2022-23 ML in Healthcare/Dataset/Kaggle Competition/training"
+data_folder = "../complete_set/training_set/"
 benign_folder = data_folder + "benign/"
 malignant_folder = data_folder + "malignant/"
 
@@ -208,7 +201,7 @@ plt.show()
 
 """#Let's extract readiomic feature through pyradiomics"""
 
-! pip install pyradiomics
+
 from radiomics import featureextractor
 
 # special functions for using pyradiomics
@@ -338,9 +331,9 @@ Remember to replicate feature selection on (internal) testing set!
 """
 
 np_test_features = test_features.to_numpy()
+fdr_, sorted_fdr_, selected_test_features, selected_test_index = compute_fdr(np_test_features, np_train_labels, features_to_select)
 
-# Replicate feature selection
-# selected_test_features = ...
+
 
 """##Plotting"""
 
@@ -362,23 +355,17 @@ pyplot.show()
 
 # https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
 from sklearn import tree
-dt_classifier = tree.DecisionTreeClassifier(criterion = [],
-                                            splitter = [],
-                                            max_depth = [],
-                                            min_samples_split = [],
-                                            min_samples_leaf = [],
-                                            min_weight_fraction_leaf = [],
-                                            max_features = [],
-                                            random_state = [],
-                                            max_leaf_nodes = [],
-                                            min_impurity_decrease = [],
-                                            class_weight = [],
-                                            ccp_alpha = [])
+import joblib
+dt_classifier = tree.DecisionTreeClassifier(criterion = "gini",
+                                            splitter = "best",
+                                            random_state = 42)
 dt_classifier = dt_classifier.fit(selected_train_features, np_train_labels)
+
+# joblib.dump(dt_classifier, "model1.joblib")
 
 #tree.plot_tree(dt_classifier);
 
-"""Predict on testing samples"""
+# """Predict on testing samples"""
 
 dt_classes = dt_classifier.predict(selected_test_features)
 
@@ -442,7 +429,7 @@ this_classifier = dt_classifier
 
 import pathlib
 
-test_path = "/content/drive/MyDrive/path/to/your/externaltesting_set/"
+test_path = "../complete_set/testing_set/"
 test_folder = pathlib.Path(test_path)
 study_testset = list(test_folder.glob('P???.png'))
 
@@ -524,7 +511,7 @@ print(tst_extracted_features)
 np_extst_features = tst_extracted_features.to_numpy()
 
 # Apply feature selection
-# selected_extst_features = ...
+fdr_, sorted_fdr_, selected_extst_features, selected_extst_index = compute_fdr(np_extst_features, np_train_labels, features_to_select)
 
 print(selected_extst_features[0,:])
 
@@ -559,9 +546,11 @@ print(tst_predictions)
 
 """Export to csv"""
 
-sample_submission = pd.read_csv("/content/drive/MyDrive/path/to/your/sample_submission_auc.csv")
+sample_submission = pd.read_csv("sample_submission_auc.csv")
 
 submission = pd.DataFrame()
 submission['Id'] = sample_submission['Id']
 submission['Predicted'] = tst_predictions[:,1]
-submission.to_csv('/content/drive/MyDrive/path/to/your/submission.csv', index=False)
+submission.to_csv('submission.csv', index=False)
+
+

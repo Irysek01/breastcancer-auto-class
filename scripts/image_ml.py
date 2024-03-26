@@ -12,7 +12,7 @@ from tensorflow.keras.models import load_model
 
 tf.config.threading.set_intra_op_parallelism_threads(5)
 tf.config.threading.set_inter_op_parallelism_threads(5)
-data_dir = '/mnt/c/Users/Daniele/Desktop/python_desktop/image_ml_processing/complete_set/training_setwm'
+data_dir = 'complete_set/training_setwm'
 image_exts = ['jpeg','jpg', 'bmp', 'png']
 
 for image_class in os.listdir(data_dir): 
@@ -39,7 +39,7 @@ for idx, img in enumerate(batch[0][:4]):
     ax[idx].imshow(img.astype(int))
     ax[idx].title.set_text(batch[1][idx])
 
-fig.savefig("/mnt/c/Users/Daniele/Desktop/python_desktop/image_ml_processing/valdata.png")
+fig.savefig("valdata.png")
 
 data = data.map(lambda x,y: (x/255, y))
 data.as_numpy_iterator().next()
@@ -69,7 +69,7 @@ logdir='logs'
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
 hist = model.fit(train, epochs=20, validation_data=val, callbacks=[tensorboard_callback])
 
-model.save(os.path.join('models','breastcanc_classifier.h5'))
+model.save(os.path.join('foundation_model','breastcanc_classifier.h5'))
 
 
 img = cv2.imread('P003.png')
