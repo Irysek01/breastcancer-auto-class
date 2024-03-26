@@ -19,7 +19,7 @@
 
 
 =====================
-breastcanc-auto-class
+breastcancer-auto-class
 =====================
 
 
@@ -32,15 +32,15 @@ The goal of this project is to build a reliable, safe and scalable ML, DL or AI-
 
 Find the Kaggle competition `at this link <https://www.kaggle.com/competitions/iuss-23-24-automatic-diagnosis-breast-cancer>`_.
 
-Also find a more informal guide to this repository at `WELCOME.md <https://github.com/AstraBert/breastcanc-auto-class/blob/main/WELCOME.md>`
+Also find a more informal guide to this repository at `WELCOME.md <https://github.com/AstraBert/breastcancer-auto-class/blob/main/WELCOME.md>`
 
 Repository structure
 ====================
 
-- In `complete_set <https://github.com/AstraBert/breastcanc-auto-class/blob/main/complete_set>` you will find the complete sets of images, both the training and test
-- In `scripts <https://github.com/AstraBert/breastcanc-auto-class/blob/main/scripts>` you will find *our* python scripts to build and finetune *our original* model
-- In `foundation_model <https://github.com/AstraBert/breastcanc-auto-class/blob/main/foundation_model>` you will find *our* foundation model in :code:`-h5` format, which is an unsopported file type for GitHub or for any normal text editor, so you won't be able to see it
-- In `proposed_models <https://github.com/AstraBert/breastcanc-auto-class/blob/main/proposed_models>` you will find a list of proposed models (based on IUSS course itself) with the scripts used to generate them, along with some other metadata
+- In `complete_set <https://github.com/AstraBert/breastcancer-auto-class/blob/main/complete_set>`_ you will find the complete sets of images, both the training and test
+- In `scripts <https://github.com/AstraBert/breastcancer-auto-class/blob/main/scripts>`_ you will find *our* python scripts to build and finetune *our original* model
+- In `foundation_model <https://github.com/AstraBert/breastcancer-auto-class/blob/main/foundation_model>`_ you will find *our* foundation model in :code:`-h5` format, which is an unsopported file type for GitHub or for any normal text editor, so you won't be able to see it
+- In `proposed_models <https://github.com/AstraBert/breastcancer-auto-class/blob/main/proposed_models>`_ you will find a list of proposed models (based on IUSS course itself) with the scripts used to generate them, along with some other metadata
 
 
 First steps
@@ -56,7 +56,7 @@ You will be able to contribute to this repository just by following these steps:
 
 In the end, a development environment will show up: it will be identical to VSCode + Linux, so you will be able to do **literally everything**.
 
-Try, for example, running a prediction with our DeepLearning foundation model, by opening your terminal with :command:`Ctrl + ò`: you will see a space on the bottom, where usually there is something like :code:`AstraBert@/workspace/breastcanc-auto-class$`.
+Try, for example, running a prediction with our DeepLearning foundation model, by opening your terminal with :command:`Ctrl + ò`: you will see a space on the bottom, where usually there is something like :code:`AstraBert@/workspace/breastcancer-auto-class$`.
 
 Now type this instruction in the terminal, pressing :command:`Enter` afterwards. 
 
@@ -104,7 +104,7 @@ Moreover, feel free to look at `Astra's GitHub account <https://github.com/Astra
 License and rights of usage 
 ===========================
 
-This repository is hereby provided under MIT license (more at `LICENSE <https://github.com/AstraBert/breastcanc-auto-class/blob/main/LICENSE>`).
+This repository is hereby provided under MIT license (more at `LICENSE <https://github.com/AstraBert/breastcancer-auto-class/blob/main/LICENSE>_`).
 
 If you use this work for your projects, please cite the authors (see under Contributors).
 
