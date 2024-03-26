@@ -30,17 +30,17 @@ This is BertGrisNald team's official repository for project building in the cont
 
 The goal of this project is to build a reliable, safe and scalable ML, DL or AI-based tool that is able to classify malignant and bening breast cancer images.
 
-Find the Kaggle competition `at this link <https://www.kaggle.com/competitions/iuss-23-24-automatic-diagnosis-breast-cancer>`_<.
+Find the Kaggle competition `at this link <https://www.kaggle.com/competitions/iuss-23-24-automatic-diagnosis-breast-cancer>`_.
 
-Also find a more informal guide to this repository at :doc:`WELCOME.md <https://github.com/AstraBert/breastcanc-auto-class/tree/main/WELCOME.md>`
+Also find a more informal guide to this repository at `WELCOME.md <https://github.com/AstraBert/breastcanc-auto-class/tree/main/WELCOME.md>`
 
 Repository structure
 ====================
 
-- In :doc:`complete_set <https://github.com/AstraBert/breastcanc-auto-class/tree/main/complete_set>` you will find the complete sets of images, both the training and test
-- In :doc:`scripts <https://github.com/AstraBert/breastcanc-auto-class/tree/main/scripts>` you will find *our* python scripts to build and finetune *our original* model
-- In :doc:`foundation_model <https://github.com/AstraBert/breastcanc-auto-class/tree/main/foundation_model>` you will find *our* foundation model in :code:`-h5` format, which is an unsopported file type for GitHub or for any normal text editor, so you won't be able to see it
-- In :doc:`proposed_models <https://github.com/AstraBert/breastcanc-auto-class/tree/main/proposed_models>` you will find a list of proposed models (based on IUSS course itself) with the scripts used to generate them, along with some other metadata
+- In `complete_set <https://github.com/AstraBert/breastcanc-auto-class/tree/main/complete_set>` you will find the complete sets of images, both the training and test
+- In `scripts <https://github.com/AstraBert/breastcanc-auto-class/tree/main/scripts>` you will find *our* python scripts to build and finetune *our original* model
+- In `foundation_model <https://github.com/AstraBert/breastcanc-auto-class/tree/main/foundation_model>` you will find *our* foundation model in :code:`-h5` format, which is an unsopported file type for GitHub or for any normal text editor, so you won't be able to see it
+- In `proposed_models <https://github.com/AstraBert/breastcanc-auto-class/tree/main/proposed_models>` you will find a list of proposed models (based on IUSS course itself) with the scripts used to generate them, along with some other metadata
 
 
 First steps
@@ -50,13 +50,13 @@ Never or rarely coded in your life? There's absolutely no problem!
 
 You will be able to contribute to this repository just by following these steps:
 
-1. Go to :menuselection:`Code<> --> Codespaces`
+1. Go to :menuselection:`Code<> > Codespaces`
 2. Click on :guilabel:`Create codespace on main`
 3. Patiently wait... This will take a while!
 
 In the end, a development environment will show up: it will be identical to VSCode + Linux, so you will be able to do **literally everything**.
 
-Try, for example, running a prediction with our DeepLearning foundation model, by opening your terminal with :command:`Ctrl+ò`: you will see a space on the bottom, where usually there is something like :code:`AstraBert@/workspace/breastcanc-auto-class$`.
+Try, for example, running a prediction with our DeepLearning foundation model, by opening your terminal with :command:`Ctrl + ò`: you will see a space on the bottom, where usually there is something like :code:`AstraBert@/workspace/breastcanc-auto-class$`.
 
 Now type this instruction in the terminal, pressing :command:`Enter` afterwards. 
 
@@ -104,7 +104,7 @@ Moreover, feel free to look at `Astra's GitHub account <https://github.com/Astra
 License and rights of usage 
 ===========================
 
-This repository is hereby provided under MIT license (more at :doc:`LICENSE <https://github.com/AstraBert/breastcanc-auto-class/tree/main/LICENSE>`).
+This repository is hereby provided under MIT license (more at `LICENSE <https://github.com/AstraBert/breastcanc-auto-class/tree/main/LICENSE>`).
 
 If you use this work for your projects, please cite the authors (see under Contributors).
 
