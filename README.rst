@@ -3,10 +3,10 @@
    <table>
    <tr>
    <td>
-   <img src="https://img.shields.io/github/languages/top/AstraBert/distilgpt2-finetuned-microbiology" alt="GitHub top language">
+   <img src="https://img.shields.io/github/languages/top/AstraBert/SacCerML" alt="GitHub top language">
    </td>
    <td>
-   <img src="https://img.shields.io/github/commit-activity/t/AstraBert/VirBiCla" alt="GitHub commit activity">
+   <img src="https://img.shields.io/github/commit-activity/t/AstraBert/simON-reads" alt="GitHub commit activity">
    </td>
    <td>
    <img src="https://img.shields.io/badge/Kaggle_Leaderboard-1st_place-green" alt="Static Badge">
@@ -113,13 +113,15 @@ Model statistics
 +---------------------------------------+-----------------------------+
 |                                       | Eval on 25% of test dataset |
 +=======================================+=============================+
-| **DecisionTree Classifier**           | 0.8                         |
+| **DecisionTree Classifier**           | 0.80                        |
 +---------------------------------------+-----------------------------+
 | **Multi-Layer Perceptron Classifier** | 0.43                        |
 +---------------------------------------+-----------------------------+
 | **Deep Learning Classifier**          | 0.79                        |
 +---------------------------------------+-----------------------------+
 | **clip-vit-finetuned-breastcancer**   | 0.55                        |
++---------------------------------------+-----------------------------+
+| **vit-base-finetuned-breastcancer**   | 0.71                        |
 +---------------------------------------+-----------------------------+
 
 References
