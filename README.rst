@@ -108,6 +108,20 @@ This repository is hereby provided under MIT license (more at `LICENSE <https://
 
 If you use this work for your projects, please cite the authors (see under Contributors).
 
+Model statistics
+================
++---------------------------------------+-----------------------------+
+|                                       | Eval on 25% of test dataset |
++=======================================+=============================+
+| **DecisionTree Classifier**           | 0.8                         |
++---------------------------------------+-----------------------------+
+| **Multi-Layer Perceptron Classifier** | 0.43                        |
++---------------------------------------+-----------------------------+
+| **Deep Learning Classifier**          | 0.79                        |
++---------------------------------------+-----------------------------+
+| **clip-vit-finetuned-breastcancer**   | 0.55                        |
++---------------------------------------+-----------------------------+
+
 References
 ==========
 
