@@ -26,17 +26,17 @@ if __name__=="__main__":
     lines = c.readlines()
     c.seek(0)
     c.truncate()
-    # for line in lines:
-    #     if check_string(line) or line=="Id,Predicted\n":
-    #         c.write(line)
-    #     else:
-    #         continue
     for line in lines:
-        if line.endswith("1.0\n"):
-            c.write(line[:-4]+"0.0\n")
+        if check_string(line) or line=="Id,Predicted\n":
+            c.write(line)
         else:
-            c.write(line[:-4]+"1.0\n")
-    c.close()
+            continue
+    # for line in lines:
+    #     if line.endswith("1.0\n"):
+    #         c.write(line[:-4]+"0.0\n")
+    #     else:
+    #         c.write(line[:-4]+"1.0\n")
+    # c.close()
 
 
 

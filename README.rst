@@ -80,8 +80,10 @@ Ok, now, what do we need in order to build the **"perfect"** model?
 - Good data and code; we will have to experiment with several different models and build from there:
   1. :code:`scikit-learn` classical models: Decision Tree, Random Forest, SVM, KNN
   2. :code:`scikit-learn` neural network: :abbreviation:`MLP` (Multi Layers Perceptron)
-  3. :code:`tensorflow-keras` neural network for image processing as suggested by Nicholas Renotte in his `youtube video <https://youtu.be/jztwpsIzEGc?feature=shared>`_
-  4. :code:`huggingface-transformers`: we will be finetuning an Artificial Intelligence-based zero-shot image classifier provided by OpenAI named :guilabel:`clip-vit-base-patch16` (see it `here <https://huggingface.co/openai/clip-vit-base-patch16>`_)
+  3. :code:`tensorflow-keras` (CNN): convoluted neural network for image processing as suggested by Nicholas Renotte in his `youtube video <https://youtu.be/jztwpsIzEGc?feature=shared>`_
+  4. :code:`tensorflow-keras` (RNN): recurrent neural network for image processing as suggested by Umair Akram in his `GitHub repository <https://github.com/MUmairAB/Breast-Cancer-Detection-using-CNNs-in-TensorFlow>`_
+  5. :code:`huggingface-transformers` (zero-shot): we will be finetuning an Artificial Intelligence-based zero-shot image classifier provided by OpenAI named :guilabel:`clip-vit-base-patch16-224` (see it `here <https://huggingface.co/openai/clip-vit-base-patch16-224>`_)
+  6. :code:`huggingface-transformers` (classification): we will be finetuning an Artificial Intelligence-based image classifier provided by Google named :guilabel:`vit-base-patch16` (see it `here <https://huggingface.co/google/vit-base-patch16>`_) and two other image classifiers provided by Microsoft, i.e. :guilabel:`beit-base-patch16-224` (see it `here <https://huggingface.co/microsoft/beit-base-patch16-224>`_) and :guilabel:`resnet-50` (see it `here <https://huggingface.co/microsoft/resnet-50>`_)
 - **BENCHMARKS**: benchmarking is essential to our puporses. We need to find the best ways to test and evaluate our models, in order to choose and submit the best ones
 - Human assessment of test data (optional, but would be nice): it will be super useful if we were able to pre-classify test images as malignant or benign, in order to know how good our models are.
 
@@ -121,7 +123,11 @@ Model statistics
 +---------------------------------------+-----------------------------+
 | **clip-vit-finetuned-breastcancer**   | 0.55                        |
 +---------------------------------------+-----------------------------+
-| **vit-base-finetuned-breastcancer**   | 0.71                        |
+| **vit-base-finetuned-BreastCancer**   | 0.71                        |
++---------------------------------------+-----------------------------+
+| **beit-base-finetuned-BreastCancer**  | 0.72                        |
++---------------------------------------+-----------------------------+
+| **resnet-50-finetuned-BreastCancer**  | TBD                         |
 +---------------------------------------+-----------------------------+
 
 References
