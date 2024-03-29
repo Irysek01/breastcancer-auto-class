@@ -1,5 +1,5 @@
 import tensorflow as tf 
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import cv2
 import numpy as np
 from argparse import ArgumentParser
@@ -18,7 +18,7 @@ args = argparse.parse_args()
 inf = args.input_file
 
 
-new_model = load_model('foundation_model/breastcanc_classifier.h5')
+new_model = load_model('foundation_model/breastcanc_classifier_enriched2.keras')
 
 import sys
 def handle_img(infile):
@@ -26,12 +26,11 @@ def handle_img(infile):
     img = cv2.imread(infile)
     resize = tf.image.resize(img, (256,256))
     yhat = new_model.predict(np.expand_dims(resize/255, 0))
-    if 0.5 < yhat: 
-        print(f'Score is {yhat[0][0]}', file=sys.stderr)
-        print(f'Predicted class is Malignant', file=sys.stderr)
+    if 0.5 < yhat[0][0]: 
+        print(f'{infile.split("/")[-1].split(".")[0].replace("P","T")},1.0')
     else: 
-        print(f'Score is {yhat[0][0]}', file=sys.stderr)
-        print(f'Predicted class is Benign', file=sys.stderr)
+        print(f'{infile.split("/")[-1].split(".")[0].replace("P","T")},0.0')
+
 
 if __name__ == "__main__":
     handle_img(inf)

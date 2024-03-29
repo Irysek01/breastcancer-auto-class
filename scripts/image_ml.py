@@ -4,14 +4,14 @@ import cv2
 import imghdr
 import numpy as np
 from matplotlib import pyplot as plt
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout
-from tensorflow.keras.metrics import Precision, Recall, BinaryAccuracy
-from tensorflow.keras.models import load_model
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout
+from keras.metrics import Precision, Recall, BinaryAccuracy
+from keras.models import load_model
 
 
-tf.config.threading.set_intra_op_parallelism_threads(5)
-tf.config.threading.set_inter_op_parallelism_threads(5)
+tf.config.threading.set_intra_op_parallelism_threads(8)
+tf.config.threading.set_inter_op_parallelism_threads(8)
 data_dir = 'complete_set/training_setwm'
 image_exts = ['jpeg','jpg', 'bmp', 'png']
 
@@ -69,7 +69,7 @@ logdir='logs'
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
 hist = model.fit(train, epochs=20, validation_data=val, callbacks=[tensorboard_callback])
 
-model.save(os.path.join('foundation_model','breastcanc_classifier.h5'))
+model.save(os.path.join('foundation_model','breastcanc_classifier_enriched.h5'))
 
 
 img = cv2.imread('P003.png')
@@ -81,8 +81,8 @@ plt.show()
 yhat = model.predict(np.expand_dims(resize/255, 0))
 if 0.5 > yhat: 
     print(f'Score is {yhat}')
-    print(f'Predicted class is Malignant')
+    print(f'Predicted class is Benign')
 else: 
     print(f'Score is {yhat}')
-    print(f'Predicted class is Benign')
+    print(f'Predicted class is Malignant')
 

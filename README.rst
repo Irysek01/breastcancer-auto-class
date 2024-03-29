@@ -9,10 +9,10 @@
    <img src="https://img.shields.io/github/commit-activity/t/AstraBert/simON-reads" alt="GitHub commit activity">
    </td>
    <td>
-   <img src="https://img.shields.io/badge/Kaggle_Leaderboard-1st_place-green" alt="Static Badge">
+   <img src="https://img.shields.io/badge/Kaggle_Leaderboard-2nd_place-green" alt="Static Badge">
    </td>
    <td>
-   <img src="https://img.shields.io/badge/Test_evaluation-80_percent-orange" alt="Static Badge">
+   <img src="https://img.shields.io/badge/Test_evaluation-91_percent-orange" alt="Static Badge">
    </td>
    </tr>
    </table>
@@ -83,7 +83,8 @@ Ok, now, what do we need in order to build the **"perfect"** model?
   3. :code:`tensorflow-keras` (CNN): convoluted neural network for image processing as suggested by Nicholas Renotte in his `youtube video <https://youtu.be/jztwpsIzEGc?feature=shared>`_
   4. :code:`tensorflow-keras` (RNN): recurrent neural network for image processing as suggested by Umair Akram in his `GitHub repository <https://github.com/MUmairAB/Breast-Cancer-Detection-using-CNNs-in-TensorFlow>`_
   5. :code:`huggingface-transformers` (zero-shot): we will be finetuning an Artificial Intelligence-based zero-shot image classifier provided by OpenAI named :guilabel:`clip-vit-base-patch16-224` (see it `here <https://huggingface.co/openai/clip-vit-base-patch16-224>`_)
-  6. :code:`huggingface-transformers` (classification): we will be finetuning an Artificial Intelligence-based image classifier provided by Google named :guilabel:`vit-base-patch16` (see it `here <https://huggingface.co/google/vit-base-patch16>`_) and two other image classifiers provided by Microsoft, i.e. :guilabel:`beit-base-patch16-224` (see it `here <https://huggingface.co/microsoft/beit-base-patch16-224>`_) and :guilabel:`resnet-50` (see it `here <https://huggingface.co/microsoft/resnet-50>`_)
+  6. :code:`huggingface-transformers` (classification - ViT): we will be finetuning an Artificial Intelligence-based image classifier provided by Google named :guilabel:`vit-base-patch16` (see it `here <https://huggingface.co/google/vit-base-patch16>`_) and two other image classifiers provided by Microsoft, i.e. :guilabel:`beit-base-patch16-224` (see it `here <https://huggingface.co/microsoft/beit-base-patch16-224>`_) and :guilabel:`resnet-50` (see it `here <https://huggingface.co/microsoft/resnet-50>`_)
+  7. :code:`huggingface-transformers` (classification - VAN): we will be finetuning Artificial Intelligence-based image classifier provided by Visual Attention Network named :guilabel:`van-small` (see it `here <https://huggingface.co/Visual-Attention-Network/van-small>`_): our model will be named **CARPE-VAN** (**CA**nce**R** **P**athology **E**valuation - **V**isual **A**ttention **N**etwork)
 - **BENCHMARKS**: benchmarking is essential to our puporses. We need to find the best ways to test and evaluate our models, in order to choose and submit the best ones
 - Human assessment of test data (optional, but would be nice): it will be super useful if we were able to pre-classify test images as malignant or benign, in order to know how good our models are.
 
@@ -112,26 +113,42 @@ If you use this work for your projects, please cite the authors (see under Contr
 
 Model statistics
 ================
-+---------------------------------------+-----------------------------+
-|                                       | Eval on 25% of test dataset |
-+=======================================+=============================+
-| **DecisionTree Classifier**           | 0.80                        |
-+---------------------------------------+-----------------------------+
-| **Multi-Layer Perceptron Classifier** | 0.43                        |
-+---------------------------------------+-----------------------------+
-| **Deep Learning Classifier**          | 0.79                        |
-+---------------------------------------+-----------------------------+
-| **clip-vit-finetuned-breastcancer**   | 0.55                        |
-+---------------------------------------+-----------------------------+
-| **vit-base-finetuned-BreastCancer**   | 0.71                        |
-+---------------------------------------+-----------------------------+
-| **beit-base-finetuned-BreastCancer**  | 0.72                        |
-+---------------------------------------+-----------------------------+
-| **resnet-50-finetuned-BreastCancer**  | TBD                         |
-+---------------------------------------+-----------------------------+
+
++----------------------------------------------+-----------------------------+
+|                                              | Eval on 25% of test dataset |
++==============================================+=============================+
+| **VotingClassifier**                         | 0.91                        |
++----------------------------------------------+-----------------------------+
+| **DecisionTree Classifier**                  | 0.80                        |
++----------------------------------------------+-----------------------------+
+| **Deep Learning Classifier**                 | 0.79                        |
++----------------------------------------------+-----------------------------+
+| **beit-base-higlyfinetuned-BreastCancer**    | 0.79                        |
++----------------------------------------------+-----------------------------+
+| **beit-base-doublefinetuned-BreastCancer**   | 0.76                        |
++----------------------------------------------+-----------------------------+
+| **Enriched Deep Learning Classifier**        | 0.75                        |
++----------------------------------------------+-----------------------------+
+| **Double Enriched Deep Learning Classifier** | 0.75                        |
++----------------------------------------------+-----------------------------+
+| **beit-base-finetuned-BreastCancer**         | 0.72                        |
++----------------------------------------------+-----------------------------+
+| **vit-base-finetuned-BreastCancer**          | 0.71                        |
++----------------------------------------------+-----------------------------+
+| **clip-vit-finetuned-breastcancer**          | 0.55                        |
++----------------------------------------------+-----------------------------+
+| **KNN Classifier**                           | 0.55                        |
++----------------------------------------------+-----------------------------+
+| **resnet-50-finetuned-BreastCancer**         | 0.5                         |
++----------------------------------------------+-----------------------------+
+| **Multi-Layer Perceptron Classifier**        | 0.43                        |
++----------------------------------------------+-----------------------------+
+| **CARPE-VAN**                                | TBD                         |
++----------------------------------------------+-----------------------------+
 
 References
 ==========
 
-Christian Salvatore. (2024). Automatic Diagnosis of Breast Cancer | IUSS 23-24. Kaggle. https://kaggle.com/competitions/iuss-23-24-automatic-diagnosis-breast-cancer
-
+- Christian Salvatore. (2024). Automatic Diagnosis of Breast Cancer | IUSS 23-24. Kaggle. https://kaggle.com/competitions/iuss-23-24-automatic-diagnosis-breast-cancer
+- Wilfrido Gómez-Flores, Maria Julia Gregorio-Calas, & Wagner Coelho de Albuquerque Pereira. (2023). BUS-BRA: A Breast Ultrasound Dataset for Assessing Computer-aided Diagnosis Systems (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8231412
+- Pawłowska, A., Ćwierz-Pieńkowska, A., Domalik, A. et al. Curated benchmark dataset for ultrasound based breast lesion analysis. Sci Data 11, 148 (2024). https://doi.org/10.1038/s41597-024-02984-z
