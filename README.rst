@@ -23,6 +23,44 @@ breastcancer-auto-class
 =======================
 
 
+Background
+==========
+## Background
+
+Cancer is the second leading cause of death worldwide, according to *IHME - Global Burden of Disease*, with 10.7 mln casualties in 2019. 
+
+.. image:: annual-number-of-deaths-by-cause.png
+  :width: 400
+  :alt: total_deaths
+
+Amongst the various types of cancer, a huge role is played by breast cancer, which stands in 4th position among the deadliest tumors, with more than 700.000 deaths during 2019 (*IHME - Global Burden of Disease*).
+
+.. image:: total-cancer-deaths-by-type.png
+  :width: 400
+  :alt: total_deaths
+
+
+Moreover, breast cancer has the highest share of number of cases/100 people worldwide (0.23 cases/100 people; *IHME - Global Burden of Disease*), as shown in this table:
+:
+
++-----------------------------+----------------------+
+|                             | Cases per 100 people |
++=============================+======================+
+| **Breast Cancer**           | 0.23                 |
++-----------------------------+----------------------+
+| **Colon and Rectum Cancer** | 0.14                 |
++-----------------------------+----------------------+
+| **Prostate cancer**         | 0.13                 |
++-----------------------------+----------------------+
+| **Bladder Cancer**          | 0.034                |
++-----------------------------+----------------------+
+| **Stomach Cancer**          | 0.033                |
++-----------------------------+----------------------+
+
+
+In this sense, it is more than vital to put intense effort into precision medicine and diagnostic tools for what concerns breast cancer.
+
+
 Overview
 ========
 
@@ -84,7 +122,7 @@ Ok, now, what do we need in order to build the **"perfect"** model?
   4. :code:`tensorflow-keras` (RNN): recurrent neural network for image processing as suggested by Umair Akram in his `GitHub repository <https://github.com/MUmairAB/Breast-Cancer-Detection-using-CNNs-in-TensorFlow>`_
   5. :code:`huggingface-transformers` (zero-shot): we will be finetuning an Artificial Intelligence-based zero-shot image classifier provided by OpenAI named :guilabel:`clip-vit-base-patch16-224` (see it `here <https://huggingface.co/openai/clip-vit-base-patch16-224>`_)
   6. :code:`huggingface-transformers` (classification - ViT): we will be finetuning an Artificial Intelligence-based image classifier provided by Google named :guilabel:`vit-base-patch16` (see it `here <https://huggingface.co/google/vit-base-patch16>`_) and two other image classifiers provided by Microsoft, i.e. :guilabel:`beit-base-patch16-224` (see it `here <https://huggingface.co/microsoft/beit-base-patch16-224>`_) and :guilabel:`resnet-50` (see it `here <https://huggingface.co/microsoft/resnet-50>`_)
-  7. :code:`huggingface-transformers` (classification - VAN): we will be finetuning Artificial Intelligence-based image classifier provided by Visual Attention Network named :guilabel:`van-small` (see it `here <https://huggingface.co/Visual-Attention-Network/van-small>`_): our model will be named **CARPE-VAN** (**CA**nce**R** **P**athology **E**valuation - **V**isual **A**ttention **N**etwork)
+  7. :code:`huggingface-transformers` (classification - VAN): we will be finetuning Artificial Intelligence-based image classifier provided by Visual Attention Network named :guilabel:`van-small` (see it `here <https://huggingface.co/Visual-Attention-Network/van-small>`_): our model will be named **CARPE-VAN** (**CA**nce:attention:`R` **P**athology **E**valuation - **V**isual **A**ttention **N**etwork)
 - **BENCHMARKS**: benchmarking is essential to our puporses. We need to find the best ways to test and evaluate our models, in order to choose and submit the best ones
 - Human assessment of test data (optional, but would be nice): it will be super useful if we were able to pre-classify test images as malignant or benign, in order to know how good our models are.
 
@@ -143,7 +181,7 @@ Model statistics
 +----------------------------------------------+-----------------------------+
 | **Multi-Layer Perceptron Classifier**        | 0.43                        |
 +----------------------------------------------+-----------------------------+
-| **CARPE-VAN**                                | TBD                         |
+| **CARPE-VAN**                                | 0.68                         |
 +----------------------------------------------+-----------------------------+
 
 References

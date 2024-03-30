@@ -357,20 +357,19 @@ pyplot.show()
 from sklearn.ensemble import VotingClassifier
 from sklearn.linear_model import LogisticRegression, SGDClassifier
 from sklearn.naive_bayes import GaussianNB
-from sklearn.ensemble import RandomForestClassifier, VotingClassifier, BaggingClassifier, HistGradientBoostingClassifier, ExtraTreesClassifier
+from sklearn.ensemble import RandomForestClassifier, VotingClassifier, BaggingClassifier, HistGradientBoostingClassifier, ExtraTreesClassifier, AdaBoostClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
+from xgboost import XGBClassifier
 import joblib
-clf1 = LogisticRegression(multi_class='auto', max_iter=1000, random_state=1)
+clf1 = AdaBoostClassifier()
 clf2 = RandomForestClassifier(n_estimators=50, random_state=1)
-clf3 = GaussianNB()
 clf4 = DecisionTreeClassifier()
-clf5 = KNeighborsClassifier(n_neighbors=5)
 clf6 = BaggingClassifier()
 clf7 = HistGradientBoostingClassifier()
 clf8 = ExtraTreesClassifier()
-clf9 = SGDClassifier(loss="log_loss")
-dt_classifier = VotingClassifier([('lr', clf1), ('rf', clf2), ('gnb', clf3), ('dt', clf4), ('knn', clf5), ('bc', clf6), ('hgb', clf7), ('etc', clf8), ('sgd', clf9)], voting='soft')
+clf10 = XGBClassifier(n_estimators=2, max_depth=2, learning_rate=1, objective='binary:logistic')
+dt_classifier = VotingClassifier([('lr', clf1), ('rf', clf2), ('dt', clf4), ('bc', clf6), ('hgb', clf7), ('etc', clf8), ('xgb', clf10)], voting='soft')
 dt_classifier = dt_classifier.fit(selected_train_features, np_train_labels)
 
 joblib.dump(dt_classifier, "VotingModel.joblib")
