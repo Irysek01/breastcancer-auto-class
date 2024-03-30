@@ -25,7 +25,6 @@ breastcancer-auto-class
 
 Background
 ==========
-## Background
 
 Cancer is the second leading cause of death worldwide, according to *IHME - Global Burden of Disease*, with 10.7 mln casualties in 2019. 
 
