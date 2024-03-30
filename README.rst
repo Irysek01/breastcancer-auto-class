@@ -9,10 +9,10 @@
    <img src="https://img.shields.io/github/commit-activity/t/AstraBert/simON-reads" alt="GitHub commit activity">
    </td>
    <td>
-   <img src="https://img.shields.io/badge/Kaggle_Leaderboard-2nd_place-green" alt="Static Badge">
+   <img src="https://img.shields.io/badge/Kaggle_Leaderboard-2nd_place-orange" alt="Static Badge">
    </td>
    <td>
-   <img src="https://img.shields.io/badge/Test_evaluation-91_percent-orange" alt="Static Badge">
+   <img src="https://img.shields.io/badge/Test_evaluation-95_percent-green" alt="Static Badge">
    </td>
    </tr>
    </table>
@@ -155,7 +155,7 @@ Model statistics
 +----------------------------------------------+-----------------------------+
 |                                              | Eval on 25% of test dataset |
 +==============================================+=============================+
-| **VotingClassifier**                         | 0.91                        |
+| **VotingClassifier (best)**                  | 0.95                        |
 +----------------------------------------------+-----------------------------+
 | **DecisionTree Classifier**                  | 0.80                        |
 +----------------------------------------------+-----------------------------+
@@ -181,7 +181,11 @@ Model statistics
 +----------------------------------------------+-----------------------------+
 | **Multi-Layer Perceptron Classifier**        | 0.43                        |
 +----------------------------------------------+-----------------------------+
-| **CARPE-VAN**                                | 0.68                         |
+| **CARPE-VAN**                                | 0.68                        |
++----------------------------------------------+-----------------------------+
+| **bus-deit**                                 | 0.83                        |
++----------------------------------------------+-----------------------------+
+| **bus-swin**                                 | 0.79                        |
 +----------------------------------------------+-----------------------------+
 
 References
